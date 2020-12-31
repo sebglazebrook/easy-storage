@@ -73,14 +73,11 @@ easy-storage backup rm .
 # Archive a directory (NOTE: contents will be deleted after archive complete)
 easy-storage archive add .
 
-# Remove a local archive (NOTE: this leaves the cloud archive untouched for safety purposes)
+# Stop archiving a local directory (NOTE: this leaves the cloud archive untouched for safety purposes)
 easy-storage archive rm .
 
 # Remove a cloud archive
-easy-storage archive rm --cloud .
-
-# Remove a local and cloud archive
-easy-storage archive rm --all .
+easy-storage archive rm --cloud $cloud-file-path
 
 # List all backups
 easy-storeage backup ls
@@ -91,7 +88,6 @@ easy-storeage archive ls
 # See the status of your backup/archive
 # This is hand to put in your $PS1 
 easy-storeage status .
-
 ```
 
 # Who
